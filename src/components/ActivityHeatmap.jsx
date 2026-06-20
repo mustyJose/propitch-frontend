@@ -32,10 +32,10 @@ function ActivityHeatmap() {
   }
 
   const getColor = (count) => {
-    if (count === 0) return 'bg-zinc-800';
-    if (count === 1) return 'bg-green-800';
-    if (count === 2) return 'bg-green-600';
-    return 'bg-green-400';
+    if (count === 0) return 'bg-zinc-700';
+    if (count === 1) return 'bg-emerald-700';
+    if (count === 2) return 'bg-emerald-500';
+    return 'bg-emerald-300';
   };
 
   return (
@@ -47,18 +47,18 @@ function ActivityHeatmap() {
               <div
                 key={day.date}
                 title={`${day.date}: ${day.count} session(s)`}
-                className={`w-3 h-3 rounded-sm ${getColor(day.count)}`}
+                className={`w-3.5 h-3.5 rounded-sm ${getColor(day.count)}`}
               />
             ))}
           </div>
         ))}
       </div>
-      <div className="flex items-center gap-2 mt-3 text-xs text-zinc-500">
+      <div className="flex items-center gap-2 mt-3 text-xs text-zinc-400">
         <span>Less</span>
-        <div className="w-3 h-3 rounded-sm bg-zinc-800" />
-        <div className="w-3 h-3 rounded-sm bg-green-800" />
-        <div className="w-3 h-3 rounded-sm bg-green-600" />
-        <div className="w-3 h-3 rounded-sm bg-green-400" />
+        <div className="w-3.5 h-3.5 rounded-sm bg-zinc-700" />
+        <div className="w-3.5 h-3.5 rounded-sm bg-emerald-700" />
+        <div className="w-3.5 h-3.5 rounded-sm bg-emerald-500" />
+        <div className="w-3.5 h-3.5 rounded-sm bg-emerald-300" />
         <span>More</span>
       </div>
     </div>
